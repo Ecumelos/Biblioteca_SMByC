@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca de Recursos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <aside class="filtros">
+      <h2>Buscar</h2>
+      <input type="text" id="busqueda" placeholder="Buscar por título...">
+
+      <div class="filtro-item">
+        <h2 class="filtro-header">Tipo</h2>
+        <div id="check-tipo" class="grupo-checks"></div>
+      </div>
+
+      <div class="filtro-item">
+        <h2 class="filtro-header">Temática</h2>
+        <div id="check-tematica" class="grupo-checks"></div>
+      </div>
+
+      <div class="filtro-item">
+        <h2 class="filtro-header">Año</h2>
+        <div id="check-anio" class="grupo-checks"></div>
+      </div>
+    </aside>
+
+    <main class="contenido">
+      <h1>Biblioteca de Recursos</h1>
+
+      <!-- Botones para cambiar de vista -->
+      <div class="view-toggle">
+        <button id="btn-tabla" class="active">Vista Tabla</button>
+        <button id="btn-lista">Vista Lista</button>
+      </div>
+
+      <!-- Contenedor para la vista tabla -->
+      <div id="tabla-container">
+        <table id="tabla-recursos">
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Temática</th>
+              <th>Título</th>
+              <th>Fecha publicación</th>
+              <th>Consultar</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- Contenedor para la vista lista -->
+      <div id="lista-container" class="lista-view" style="display:none;"></div>
+
+      <!-- Controles de paginación -->
+      <div id="paginacion" class="paginacion"></div>
+    </main>
+  </div>
+
+  <!-- Carga PapaParse para leer el CSV -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="biblioteca.js"></script>
+</body>
+</html>

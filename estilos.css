@@ -1,0 +1,197 @@
+/* Se aplica la tipografía Avenir Next, con fallback a sans-serif */
+body {
+    font-family: "Avenir Next", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  .contenedor {
+    display: flex;
+  }
+  
+  aside.filtros {
+    width: 250px;
+    background-color: #e1eefe;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  aside.filtros h2 {
+    margin-top: 20px;
+    color: #1e7788;
+    font-size: 18px;
+  }
+  
+  /* Estilo para encabezados de secciones colapsables */
+  .filtro-header {
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  aside.filtros input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .filtro-item {
+    margin-top: 10px;
+  }
+  
+  .grupo-checks {
+    margin-top: 10px;
+  }
+  
+  /* Cuando se colapse la sección, se oculta el contenedor */
+  .grupo-checks.collapsed {
+    display: none;
+  }
+  
+  .grupo-checks label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  main.contenido {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  main h1 {
+    color: #1e7788;
+  }
+  
+  .view-toggle {
+    margin-bottom: 20px;
+  }
+  
+  .view-toggle button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  .view-toggle button.active {
+    background-color: #1e7788;
+    color: #fff;
+  }
+  
+  /* Vista Tabla */
+  #tabla-recursos {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  #tabla-recursos th, 
+  #tabla-recursos td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  #tabla-recursos th {
+    background-color: #e1eefe;
+  }
+  
+  a.icono {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  
+  a.icono img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Vista Lista */
+  .lista-view {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .lista-item {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .lista-item .info {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .lista-item .info h2 {
+    margin: 0 0 10px;
+    font-size: 24px;  /* Título más grande */
+    color: #1e7788;
+  }
+  
+  .lista-item .info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .lista-item .info a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #1e7788;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+  
+  .lista-item .foto {
+    flex: 0 0 auto;
+  }
+  
+  .lista-item .foto img {
+    max-width: 75%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Paginación */
+  .paginacion {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .paginacion button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  .paginacion button.active {
+    background-color: #1e7788;
+    color: #fff;
+  }
+  
+  /* Responsive para vista lista */
+  @media (max-width: 768px) {
+    .lista-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .lista-item .foto {
+      margin-top: 10px;
+    }
+  }
+  
